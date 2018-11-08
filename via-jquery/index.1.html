@@ -7,29 +7,8 @@
     <title>Ajax</title>
 </head>
 <body>
-    <!-- Liste des cryptos -->
-    <select id="cryptos">
-        <option value="">---</option>
-        <!-- <option value="BTC">Bitcoin</option> -->
-    </select>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <button id="get_btc">Get my Bitcoin !</button>
 
     <!-- 
 
@@ -48,34 +27,6 @@
     <!-- Puis on charge notre logique
         ============================ -->
     <script>
-    $(document).ready(function(){
-
-        // Récup du listing des cryptos
-        $.ajax({
-            url: "https://api.coinmarketcap.com/v2/listings/",
-            success: function(r){
-                var cryptos = r.data
-                var el_cryptos = $('#cryptos');
-
-                $.each( cryptos, function(index, crypto){
-                    var el_opt = $('<option>');
-                        el_opt.attr('value', crypto.symbol);
-                        el_opt.text(crypto.name);
-                    el_cryptos.append(el_opt);
-                });
-            }
-        });
-    });
-
-
-
-
-
-
-
-
-
-
     // La partie Requete de AJAX
     function get_btc() {
         $.ajax({
