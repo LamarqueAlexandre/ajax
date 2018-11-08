@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax</title>
+</head>
+<body>
+
+    <button id="get_btc">Get my Bitcoin !</button>
+
+    <!-- On charge les librairies 
+        ============================-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Puis on charge notre logique
+        ============================ -->
+    <script>
+    function get_btc() {
+        alert("Donne moi l'adresse de ton Wallet !");
+    }
+
+    $(document).ready(function(){
+
+        // Clicl sur le bouton "get_btc"
+        $('#get_btc').on('click', get_btc);
+
+    });
+    </script>
+</body>
+</html>
