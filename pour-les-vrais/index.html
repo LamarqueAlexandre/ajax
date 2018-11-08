@@ -34,6 +34,7 @@
         // ftp://user:password@site.com
         if (xhr != undefined) 
         {
+            // On prepare la requête
             xhr.open(
                 /* methode*/    'GET', // Methode de requete
                 /* url*/        'https://api.coinmarketcap.com/v2/listings/', // URL 
@@ -41,6 +42,16 @@
                 /* user */      null, // facultatif, Nom d'utilisateur
                 /* password */  null // facultatif, Mot de passe
             );
+
+            // Traiter l'état de la requête
+            xhr.onreadystatechange = function()
+            {
+                console.log('Ready State : '+  xhr.readyState );
+                console.log('Status : '+  xhr.status );
+            }
+
+            // Envois de la requête
+            xhr.send();
         }
 
     }
