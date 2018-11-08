@@ -13,6 +13,36 @@
     <script>
     function get_ajax() {
 
+        // Variable qui va stockée l'instance de XMLHttpRequest
+        var xhr;
+
+        // Instance de l'objet XMLHttpRequest
+        if (window.ActiveXObject) { // IE
+            xhr = new ActiveXObject('Microsoft.XMLHTTP');
+        }
+        else if (window.XMLHttpRequest) { // Les autres navigateurs
+            xhr = new XMLHttpRequest();
+        }
+        else { // Les navigateurs beaucoup trop vieux ....
+            alert("Votre navigateur n'est pas adapté pour faire des requêtes AJAX...");
+        }
+
+        // Est ce que XHR n'est pas indefinie..
+        // Est ce que XHR est utilisable...
+
+        // http://www.site.com
+        // ftp://user:password@site.com
+        if (xhr != undefined) 
+        {
+            xhr.open(
+                /* methode*/    'GET', // Methode de requete
+                /* url*/        'https://api.coinmarketcap.com/v2/listings/', // URL 
+                /* async */     true, // facultatif, si false, ne retourne pas la réponse.
+                /* user */      null, // facultatif, Nom d'utilisateur
+                /* password */  null // facultatif, Mot de passe
+            );
+        }
+
     }
     </script>
 </body>
