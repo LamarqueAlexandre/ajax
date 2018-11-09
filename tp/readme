@@ -1,0 +1,37 @@
+ETAPE 1
+----------
+
+Ecrire , en PHP, le script permettant de récupérer le contenu du fichier "users.csv", et injecter ce contenu en base de données.
+
+- Préparer une base de données avec la table "users" et les champ "firstname" (varchar(20)), "lastname" (varchar(20)) et "email" (varchar(200)).
+- N'oubliez pas le champ ID en auto-incrément et unique.
+
+utiliser:
+file_get_contents()
+explode()
+foreach()
+PDO
+
+
+ETAPE 2
+----------
+
+Ecrire un script PHP permettant la récupération des données utilisateur depuis la BDD.
+Ce script génère le rendu au format json.
+
+Utiliser:
+headers()
+json_encode()
+PDO
+
+
+ETAPE 3
+----------
+
+Ecrire un document HTML + JS permettant la récup des données JSON, puis affichage dans un tableau HTML.
+
+si possible avec XMLHttpRequest... sinon avec jQuery.
+
+
+
+Good luck ;)
